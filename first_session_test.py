@@ -1,3 +1,4 @@
+from login import Merlin
 from miscellaneous import get_csrf_token
 
 import unittest
@@ -28,6 +29,14 @@ class TestMerlinSession(unittest.TestCase):
         r2 = s.post("http://merlindiary.ru/login", data = data)
         self.assertEqual(
             r2.status_code,
+            200
+        )
+    
+    def test_login_via_Merlin_class(self):
+        M = Merlin()
+        r = M.login()
+        self.assertEqual(
+            r.status_code,
             200
         )
     
