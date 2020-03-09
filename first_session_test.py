@@ -1,3 +1,5 @@
+from miscellaneous import get_csrf_token
+
 import unittest
 from bs4 import BeautifulSoup
 import requests
@@ -27,4 +29,20 @@ class TestMerlinSession(unittest.TestCase):
         self.assertEqual(
             r2.status_code,
             200
+        )
+    
+    def test_csrf(self):
+        s = requests.Session()
+        r1 = s.get("http://merlindiary.ru/login")
+        soup = BeautifulSoup(r1.text, 'html.parser')
+        s1 = soup.find_all(name="meta", attrs={"name":"csrf-token"})[0]['content']
+        s2 = soup.input['value']
+        s3 = get_csrf_token(r1)
+        self.assertEqual(
+            s1,
+            s2
+        )
+        self.assertEqual(
+            s1,
+            s3
         )
