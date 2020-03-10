@@ -1,5 +1,13 @@
 [[package]]
 category = "main"
+description = "Classes Without Boilerplate"
+name = "attrs"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "19.3.0"
+
+[[package]]
+category = "main"
 description = "Screen-scraping library"
 name = "beautifulsoup4"
 optional = false
@@ -35,6 +43,25 @@ name = "chardet"
 optional = false
 python-versions = "*"
 version = "3.0.4"
+
+[[package]]
+category = "main"
+description = "fuzzysearch is useful for finding approximate subsequence matches"
+name = "fuzzysearch"
+optional = false
+python-versions = "*"
+version = "0.7.0"
+
+[package.dependencies]
+attrs = ">=19.3"
+
+[[package]]
+category = "main"
+description = "Fuzzy string matching in python"
+name = "fuzzywuzzy"
+optional = false
+python-versions = "*"
+version = "0.18.0"
 
 [[package]]
 category = "main"
@@ -75,14 +102,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 version = "1.25.8"
 
 [metadata]
-content-hash = "5eb886304d103e950b30b3c908e657d6090c8b32ea565c14b5ea4cf1896bfecf"
+content-hash = "62daf72ca0574e5d790429d15c9b851bde89c53b0ee3def1ebb68d7e347b094c"
 python-versions = "^3.7"
 
 [metadata.hashes]
+attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"]
 beautifulsoup4 = ["05fd825eb01c290877657a56df4c6e4c311b3965bda790c613a3d6fb01a5462a", "9fbb4d6e48ecd30bcacc5b63b94088192dcda178513b2ae3c394229f8911b887", "e1505eeed31b0f4ce2dbb3bc8eb256c04cc2b3b72af7d551a4ab6efd5cbe5dae"]
 bs4 = ["36ecea1fd7cc5c0c6e4a1ff075df26d50da647b75376626cc186e2212886dd3a"]
 certifi = ["017c25db2a153ce562900032d5bc68e9f191e44e9a0f762f373977de9df1fbb3", "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
+fuzzysearch = ["0bba7697dd4c7e552a6124c97751a82007b8b2359ff54adb4608fb458981c0e9", "20a4f896990d9fe05fb39f24e21e1b8c71fee75a03572dcb7a2b64fa9f256e19", "243717f44bce3968aaa074c79fff4489e652712da42e20337980305b2b0a9aca", "31e71e19f4ba0b71ad1c1df52f7e5122e640c56941007595a4e151e3055b3da3", "3e5ede382010346859b96e56c9723df7f6f06772cb6405b5669277fc0fe5cce9", "440fa8d506658b157f62825a8b66d2ebdd09a6f2610c05a0e9d67f2620166c75", "6011a55fb3458fb64d5f52f7570eb88dfe641a8d868957775e8de70fe736b725", "628bd13f8195defad403ac54c2ebfe53003e0a186d46f375a52f471bcc906391", "6888a8be4710e82a660b559b77f8d44d92e801d913d9be1632f77bd23622dfb8", "798f82a9c18049335b774ea7951b0c5a9475ce28eba0a7b26eb8b410fc94d8ff", "90806c7b076432d935cb9e2fc2e9a0a6b4fa22c611e1a68c6279d5add0948851", "9c666cddf485fa84f68be2abc35e8a376f5d15997a38d1390a186ead8eb1c1d2", "ac334532a786412ed986584c53b88794c6cb6b0cdecf55794e52bde3c0b298ff", "b315694a05c6e12b23bb7d40eee321c56e4484f8d8fc5465d5c43863d877e28e", "ba5480bc954961fc91ecb1321c531debdc8b2683a31e67b0fb659b70fe1b5873", "d89309d1d25594c53097d21f506ab4d2b434f56b414817798ec271f806f1ed0b", "f027a31d3c2ac99d1d24b84b948065ea75c403db32e74211e0bc8b412cedcc98", "f15793c409f5936a127ed7de63b48db17ddf20b966a1e96f50b462989a0b0e27"]
+fuzzywuzzy = ["45016e92264780e58972dca1b3d939ac864b78437422beecebb3095f8efd00e8", "928244b28db720d1e0ee7587acf660ea49d7e4c632569cad4f1cd7e68a5f0993"]
 idna = ["7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb", "a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"]
 requests = ["43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee", "b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"]
 soupsieve = ["e914534802d7ffd233242b785229d5ba0766a7f487385e3f714446a07bf540ae", "fcd71e08c0aee99aca1b73f45478549ee7e7fc006d51b37bec9e9def7dc22b69"]

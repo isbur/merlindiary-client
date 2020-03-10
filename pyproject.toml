@@ -12,4 +12,6 @@ version = "0.1.0"
 python = "^3.7"
 requests = "^2.23"
 bs4 = "^0.0.1"
+fuzzysearch = "^0.7.0"
+fuzzywuzzy = "^0.18.0"
 [tool.poetry.dev-dependencies]

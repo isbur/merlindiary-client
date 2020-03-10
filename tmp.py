@@ -5,13 +5,12 @@ from miscellaneous import get_properties
 from set_marks import Marks
 
 #import json
-## import re
+import re
 #import requests
 #from urllib.parse import unquote
 
 M = Marks(1155)
-M.login()
-r = M.set_all()
-soup = beautify(r)
+M.set_all()
+
 # sprint(r.request)
 
